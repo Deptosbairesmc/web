@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying the header
@@ -7,11 +8,11 @@
  * @package Hestia
  * @since Hestia 1.0
  */
+
 $wrapper_div_classes = 'wrapper ';
 if ( is_single() ) {
 	$wrapper_div_classes .= join( ' ', get_post_class() );
 }
-
 $layout               = apply_filters( 'hestia_header_layout', get_theme_mod( 'hestia_header_layout', 'default' ) );
 $disabled_frontpage   = get_theme_mod( 'disable_frontpage_sections', false );
 $wrapper_div_classes .=
@@ -51,3 +52,14 @@ if ( (bool) $hide_top_bar === false ) {
 			hestia_after_header_trigger();
 			?>
 		</header>
+		
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-197265561-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-197265561-1');
+</script>
